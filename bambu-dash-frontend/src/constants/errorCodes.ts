@@ -1,0 +1,10 @@
+export enum ErrorCode {
+    SUCCESS = 100,
+    UNAUTHORIZED = 1001,
+    FORBIDDEN = 1002,
+    NOT_FOUND = 1003,
+    VALIDATION_FAILED = 1004,
+    SERVER_ERROR = 1005,
+    NETWORK_TIMEOUT = 1006,
+    UNKNOWN = 1099,
+}
