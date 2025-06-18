@@ -9,3 +9,9 @@ export interface ApiResponse<T> {
 export interface InitStatusData {
     initStatus: boolean;
 }
+
+export interface ScanWifiData {
+    ssid: string;
+    secure: boolean;
+    signalStrength: number;
+}
