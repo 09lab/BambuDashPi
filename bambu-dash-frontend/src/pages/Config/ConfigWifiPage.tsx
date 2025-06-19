@@ -13,13 +13,13 @@ const WifiSelectPage: React.FC = () => {
   const [selectedSecure, setSelectedSecured] = useState(false);
 
   const wifiInfo: ScanWifiData[] = [
-    { ssid: 'HomeNetwork', signalStrength: -40, secure:true},
-    { ssid: 'RoomNetwork', signalStrength: -60, secure:true},
-    { ssid: '09LabsNetwork', signalStrength: -50, secure:false},
-    { ssid: 'OpenNetwork', signalStrength: -90, secure:false}    
+    { ssid: 'HomeNetwork', signalStrength: -40, secure: true },
+    { ssid: 'RoomNetwork', signalStrength: -60, secure: true },
+    { ssid: '09LabsNetwork', signalStrength: -50, secure: false },
+    { ssid: 'OpenNetwork', signalStrength: -90, secure: false }
   ];
 
-  const handleOnClickListItem = (ssid:string, secure: boolean) => {
+  const handleOnClickListItem = (ssid: string, secure: boolean) => {
     setSelectedSsid(ssid);
     setSelectedSecured(secure);
     setDialogOpen(true);
@@ -48,18 +48,19 @@ const WifiSelectPage: React.FC = () => {
       {/* 우측 영역 */}
       <Box bgcolor="#242424" flex={1} display="flex" flexDirection="column">
         {/* SSID 리스트 (상단 80%) */}
-        <Typography variant='h5' textAlign="center"
-          sx={{padding:"20px"}}
+        <Typography
+          variant='h5' textAlign="center" color='#e4e4e4'
+          sx={{ padding: "20px" }}
         >Network List</Typography>
-        <Box bgcolor="#242424"flex={8} overflow="auto" p={2}>
+        <Box bgcolor="#242424" flex={8} overflow="auto" p={2}>
           <Paper elevation={3}>
             <List>
               {wifiInfo.map((wifi, index) => (
                 <ListItem key={index} secondaryAction={
                   <Box display="flex" alignItems="center" gap={1}>
-                      {wifi.secure && <LockIcon />}
-                      <WifiIcon />
-                    </Box>
+                    {wifi.secure && <LockIcon />}
+                    <WifiIcon />
+                  </Box>
                 }>
                   <ListItemButton onClick={() => handleOnClickListItem(wifi.ssid, wifi.secure)}>
                     <ListItemText primary={wifi.ssid} />
