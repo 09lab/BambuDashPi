@@ -15,3 +15,8 @@ export interface ScanWifiData {
     secure: boolean;
     signalStrength: number;
 }
+
+export interface SetWifiPayload {
+  ssid: string;
+  password: string;
+}
