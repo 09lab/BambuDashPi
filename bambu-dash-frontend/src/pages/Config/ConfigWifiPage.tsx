@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Box, Button, Typography, Paper, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
 import WifiIcon from '@mui/icons-material/Wifi';
-import ConfigWifiDialog from '@/components/ConfigWifiDialog';
+import ConfigWifiDialog from '@/components/config/wifi/ConfigWifiDialog';
 import { ScanWifiData } from '@/interface/response';
 
 const WifiSelectPage: React.FC = () => {
