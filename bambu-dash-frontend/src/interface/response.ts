@@ -17,6 +17,12 @@ export interface ScanWifiData {
 }
 
 export interface SetWifiPayload {
-  ssid: string;
-  password: string;
+    ssid: string;
+    password: string;
+}
+
+export interface ConnectitonResult {
+    result: string;
+    reasonCode: number;
+    reasonStr: string;
 }
