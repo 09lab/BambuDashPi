@@ -90,6 +90,16 @@ const ConfigConnectPage: React.FC = () => {
       </Slide>
 
       <Box mt={4} display="flex" flexDirection="column" alignItems="center">
+        {status === 'pending' && (
+          <>
+            <Typography variant="h6" fontWeight="bold">
+              {printer.name}
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              {config.printerIp}
+            </Typography>
+          </>
+        )}
         {renderIcon()}
         <Typography mt={2} variant="h6">
           {message}
