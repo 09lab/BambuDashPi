@@ -47,7 +47,7 @@ export default function MainPage() {
     }
 
     return (
-        <Box display="flex" height="480px" width="100vw" bgcolor="#141414">
+        <Box display="flex" height="100vh" width="100vw" bgcolor="#141414">
             <Box display="flex" sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs 
                     orientation="vertical" 

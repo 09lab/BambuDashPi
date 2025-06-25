@@ -1,7 +1,12 @@
+import React, {useState} from 'react';
 import { Box, Button, ButtonGroup, LinearProgress, Typography } from '@mui/material';
 import StopIcon from '@mui/icons-material/Stop';
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+
+import FireplaceIcon from '@mui/icons-material/Fireplace';
+import HvacIcon from '@mui/icons-material/Hvac';
+import SpeedIcon from '@mui/icons-material/Speed';
 
 const buttons = [
   <Button key="one" startIcon={<PlayArrowIcon />}>Start</Button>,
@@ -9,7 +14,17 @@ const buttons = [
   <Button key="three" startIcon={<StopIcon />}>Stop</Button>,
 ];
 
-const MainControlComponent = () => {
+const MainControlComponent: React.FC = () => {
+
+    const [speed, setSpeed] = useState<'Slient' | 'Normal' | 'Sport' | 'Ludicrous'>('Normal');
+    const [hms, setHms] = useState<'normal' | 'warning'>('normal');
+    
+    const renderSpeedIcon = () => {
+        switch(speed) {
+
+        }
+    };
+
     return (
         <Box
             display="flex" justifyContent="center" alignItems="center"
@@ -25,14 +40,22 @@ const MainControlComponent = () => {
                 flexDirection='column'
             >
                 <Box
-                    display="flex" justifyContent="center" alignItems="center"
+                    display="flex" justifyContent="center" alignItems="end"
                     height="100%"
                     width="100%"
                     flexDirection='row'
                 >
-                    <Typography color='#e4e4e4'>32%</Typography>
+                    <Box flex={1}><Typography color='#e4e4e4' align='center'>32%</Typography></Box>
+                    <Box flex={1}><Typography color='#e4e4e4' align='center'>Test_print.3mf</Typography></Box>
+                    <Box flex={1}><Typography color='#e4e4e4' align='center'>55/142</Typography></Box>
                 </Box>       
-                <LinearProgress value={23} sx={{ width: '100%', height: 5, margin: 1}}/>
+                <Box 
+                    display="flex" justifyContent="center" alignItems="center"
+                    height="100%"
+                    width="100%"
+                >
+                    <LinearProgress value={23} sx={{ width: '75%', height: 5, margin: 1}}/>
+                </Box>
             </Box>
             <Box flex={4} >
                 <ButtonGroup

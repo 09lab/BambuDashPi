@@ -43,14 +43,14 @@ const MainControlCard = () => {
             flexDirection: "row",
         }}>
             <Box
-                flex={4}
-            >
-                asdf
-            </Box>
-            <Box
                 flex={6}
             >
                 <MainControlComponent />
+            </Box>
+            <Box
+                flex={4}
+            >
+                asdf
             </Box>
         </Card>
     );
