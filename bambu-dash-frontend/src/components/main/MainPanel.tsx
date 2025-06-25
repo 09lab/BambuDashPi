@@ -13,6 +13,7 @@ const MainPanel = () => {
         >
             <Box
                 flex={7}
+                paddingBottom={3}
             >
                 <MainStatusCard />
             </Box>

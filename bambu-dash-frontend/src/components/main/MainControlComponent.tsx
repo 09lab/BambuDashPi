@@ -6,7 +6,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 import FireplaceIcon from '@mui/icons-material/Fireplace';
 import HvacIcon from '@mui/icons-material/Hvac';
-import SpeedIcon from '@mui/icons-material/Speed';
+
 
 const buttons = [
   <Button key="one" startIcon={<PlayArrowIcon />}>Start</Button>,
@@ -14,16 +14,7 @@ const buttons = [
   <Button key="three" startIcon={<StopIcon />}>Stop</Button>,
 ];
 
-const MainControlComponent: React.FC = () => {
-
-    const [speed, setSpeed] = useState<'Slient' | 'Normal' | 'Sport' | 'Ludicrous'>('Normal');
-    const [hms, setHms] = useState<'normal' | 'warning'>('normal');
-    
-    const renderSpeedIcon = () => {
-        switch(speed) {
-
-        }
-    };
+const MainPrintControlComponent: React.FC = () => {
 
     return (
         <Box
@@ -68,4 +59,4 @@ const MainControlComponent: React.FC = () => {
     );
 };
 
-export default MainControlComponent;
+export default MainPrintControlComponent;

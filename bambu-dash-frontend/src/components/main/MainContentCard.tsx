@@ -1,34 +1,10 @@
-import { Box, Card, Typography } from '@mui/material';
-import BambuLabP1S from '@/assets/images/bambu_lab_p1s.png';
-import MainControlComponent from './MainControlComponent';
+import { Box, Card } from '@mui/material';
+import MainPrintControlComponent from './MainControlComponent';
+import {MainDeviceStatusComponent, MainPrintStatusComponent} from './MainStatusComponent';
 
 const MainStatusCard = () => {
     return (
-        <Box
-            display="flex"
-            flexDirection="row"
-            height="100%"
-            width="100%"
-        >
-            <Box
-                flex={5}
-                display="flex" justifyContent="center" alignItems="center"
-            >
-                <img src={BambuLabP1S}
-                    style={{
-                        objectFit: 'contain',
-                        width: '100%',
-                        height: '100%',
-                        display: 'block'
-                    }}
-                />
-            </Box>
-            <Box
-                flex={5}
-            >
-                what
-            </Box>
-        </Box>
+        <MainDeviceStatusComponent />
     );
 };
 
@@ -45,12 +21,12 @@ const MainControlCard = () => {
             <Box
                 flex={6}
             >
-                <MainControlComponent />
+                <MainPrintControlComponent />
             </Box>
             <Box
                 flex={4}
             >
-                asdf
+                <MainPrintStatusComponent />
             </Box>
         </Card>
     );
