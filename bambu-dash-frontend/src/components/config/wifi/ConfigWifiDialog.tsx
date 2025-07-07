@@ -11,12 +11,7 @@ import {
   Box
 } from '@mui/material';
 
-interface WifiDialogProps {
-  open: boolean;
-  onClose: () => void;
-  ssid: string;
-  isSecured: boolean;
-}
+import { WifiDialogProps } from '@/interface/types';
 
 const ConfigWifiDialog: React.FC<WifiDialogProps> = ({ open, onClose, ssid, isSecured }) => {
   return (

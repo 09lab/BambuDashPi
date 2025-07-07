@@ -65,7 +65,8 @@ const MainDeviceStatusComponent: React.FC = () => {
                 >
                     <Box display="flex" flex={1} flexDirection="column" justifyContent="center">
                         <Typography paddingBottom={1} color='#e4e4e4' align='center'>Printer : Bambu Lab P1S</Typography>
-                        <Typography color='#e4e4e4' align='left'>IP : 192.168.0.7</Typography>
+                        <Typography paddingBottom={1} color='#e4e4e4' align='left'>IP : 192.168.0.7</Typography>
+                        <Typography color='#e4e4e4' align='left'>Access : 1348372</Typography>
                     </Box>
                     <Box flex={1} flexDirection='row' display='flex' width='100%' height='100%'>
                         <IconWithText

@@ -20,3 +20,14 @@ export type IconWithTextProps = {
   justify: string;                  // justifyContent
   action?: () => void;              // 클릭 시 실행할 함수
 };
+
+export interface WifiDialogProps {
+  open: boolean;
+  onClose: () => void;
+  ssid: string;
+  isSecured: boolean;
+}
+
+export interface HotendDialogProps {
+  
+}
